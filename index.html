@@ -23,11 +23,20 @@
   </header>
 
   <main class="container-fluid">
-    <section class="row ">
+    <section class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h5 id="health"></h5>
+      </div>
+      <div class="col-4"></div>
+    </section>
+    <section class="row">
       <div class="col spriteCol">
         <div class="sprite-holder" id='sprite-parent'>
           <img src="assets/terry-stage.gif" id="background-stage" alt="" srcset="">
-          <img src="assets/terry-idle.gif" id="player-sprite" alt="">
+          <img src="assets/rock-idle.gif" id="rock-sprite" alt="" srcset="">
+          <img src="assets/terry-idle.gif" id="terry-sprite" alt="">
+
         </div>
       </div>
       <div class="col buttonsCol">
@@ -45,6 +54,8 @@
 
     </section>
   </main>
+
+  <script src="game.js"></script>
 </body>
 
 </html>

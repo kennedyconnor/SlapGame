@@ -15,12 +15,20 @@
   left: 0;
 }
 
-#player-sprite{
+#terry-sprite{
 position: absolute;
     left: 150px;
     bottom: 18px;
     height: 140px;
 
+}
+#rock-sprite{
+  position:absolute;
+  right:150px;
+  bottom: 18px;
+  height: 140px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .buttonsCol{
