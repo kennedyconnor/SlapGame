@@ -1,0 +1,36 @@
+#sprite-parent{
+  position: relative;
+  top:0;
+  left:0;
+  max-width: 654px;
+}
+
+.spriteCol{
+  max-width: 654px;
+}
+#background-stage{
+
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#player-sprite{
+position: absolute;
+    left: 150px;
+    bottom: 18px;
+    height: 140px;
+
+}
+
+.buttonsCol{
+  display: flex;
+  flex-direction:column;
+  
+  justify-content: center;
+  
+}
+
+.buttonsCol>button{
+  max-width:50%;
+}
