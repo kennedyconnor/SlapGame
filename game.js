@@ -67,6 +67,7 @@ function reset() {
   document.getElementById('terry-sprite').setAttribute('src', player.animation[0]);
   document.getElementById('terry-sprite').style.height = player.animationHeight[0];
   document.getElementById('terry-sprite').style.left = player.animationLeft[0];
+  dummy.hitStates = [];
   drawUI();
 }
 
