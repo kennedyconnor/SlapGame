@@ -53,3 +53,11 @@ position: absolute;
  justify-content:center;
  margin-top:15px;
 }
+#title{
+  text-align:center
+}
+
+#infoCol{
+  display:flex;
+  justify-content: space-around
+}
