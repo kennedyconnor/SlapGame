@@ -24,7 +24,7 @@ position: absolute;
 }
 #rock-sprite{
   position:absolute;
-  right:150px;
+  left:380px;
   bottom: 18px;
   height: 140px;
   -webkit-transform: scaleX(-1);
@@ -39,6 +39,12 @@ position: absolute;
   
 }
 
+.reset{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .buttonsCol>button{
-  max-width:50%;
+  box-sizing:border-box;
 }
