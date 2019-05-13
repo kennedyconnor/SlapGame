@@ -50,7 +50,7 @@ position: absolute;
 }
 #hitStateButtons{
  display: flex;
- justify-content:space-around;
+ justify-content:center;
  margin-top:15px;
 }
 #title{
