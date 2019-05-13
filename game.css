@@ -48,3 +48,8 @@ position: absolute;
 .buttonsCol>button{
   box-sizing:border-box;
 }
+#hitStateButtons{
+ display: flex;
+ justify-content:center;
+ margin-top:15px;
+}

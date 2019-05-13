@@ -6,6 +6,7 @@ let dummy = {
   hitStates: [],
   animation: ['assets/rock-idle.gif', 'assets/rock-fall.gif'],
 }
+
 let player = {
   health: 100,
   name: 'Terry Bogard',
@@ -24,11 +25,16 @@ let hitStates = {
 
 }
 
+function addHitState(x) {
+  let hitStates = ['block', 'counterhit', 'guardcrush']
+  dummy.hitStates.push(hitStates[x]);
+}
+
 drawUI()
 
 function hit(x) {
   let hitDamage = [1, 5, 10] //[punch, kick, burn knuckle]
-  dummy.health -= hitDamage[x];
+  dummy.health -= hitDamage[x] + addMods();
   dummy.hits++;
   drawUI();
 }
@@ -62,4 +68,16 @@ function reset() {
   document.getElementById('terry-sprite').style.height = player.animationHeight[0];
   document.getElementById('terry-sprite').style.left = player.animationLeft[0];
   drawUI();
+}
+
+function addMods() {
+  let damageMod = 0;
+  for (let i = 0; i < dummy.hitStates.length; i++) {
+    // if (dummy.hitStates[i] == 'block') { damageMod += hitStates.block.modifier }
+    // if (dummy.hitStates[i] == 'counterhit') { damageMod += 2 }
+    // if (dummy.hitStates[i] == 'guardcrush') { damageMod += 5 }
+    damageMod += hitStates[dummy.hitStates[i]].modifier;
+  }
+  return damageMod;
+
 }
