@@ -2,6 +2,7 @@ let health = 100;
 let pName = '';
 let hits = 0;
 
+console.log("hello dumbass")
 drawUI()
 
 function punch() {
@@ -23,12 +24,14 @@ function burnKnuckle() {
 }
 
 function drawUI() {
-  if (health >= 0) {
+  if (health > 0) {
     document.getElementById('health').innerText = 'Rock Howard: ' + health;
     document.getElementById('hits').innerText = 'Hits: ' + hits;
   }
-  if (health == 0) {
+  else if (health <= 0) {
+    document.getElementById('health').innerText = 'Rock Howard:' + health;
     document.getElementById('rock-sprite').setAttribute('src', 'assets/rock-fall.gif');
+    document.getElementById('hits').innerText = 'Hits: ' + hits;
   }
 
 }
