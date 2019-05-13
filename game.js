@@ -3,7 +3,7 @@ let dummy = {
   name: 'Rock Howard',
   hits: 0,
   isAlive: true,
-  hitState: ['blocking', 'counterhit', 'guardbreak'],
+  hitStates: [],
   animation: ['assets/rock-idle.gif', 'assets/rock-fall.gif'],
 }
 let player = {
@@ -11,34 +11,29 @@ let player = {
   name: 'Terry Bogard',
   hits: 0,
   isAlive: true,
-  hitState: ['blocking', 'counterhit', 'guardbreak'],
+  hitStates: [],
   animation: ['assets/terry-idle.gif', 'assets/terry-punch.gif', 'assets/terry-kick.gif', 'assets/terry-burnKnuckle.gif', 'assets/terry-win3.gif'],
   animationHeight: ['140px', , , , '280px'],
   animationLeft: ['150px', , , , '120px'],
 }
 
+let hitStates = {
+  block: { name: 'blocking', modifier: -1, description: 'Look out for chip damage' },
+  counterhit: { name: 'counterhit', modifier: 2, description: 'Stop pressing buttons' },
+  guardcrush: { name: 'guardcrush', modifier: 5, description: 'Knock knock!' }
+
+}
+
 drawUI()
 
-function punch() {
-  //document.getElementById('terry-sprite').setAttribute('src', player.animation[1]); 
-  dummy.health--;
+function hit(x) {
+  let hitDamage = [1, 5, 10] //[punch, kick, burn knuckle]
+  dummy.health -= hitDamage[x];
   dummy.hits++;
   drawUI();
 }
 
-function kick() {
-  //document.getElementById('terry-sprite').setAttribute('src', player.animation[2]);
-  dummy.health = dummy.health - 5;
-  dummy.hits++;
-  drawUI();
-}
 
-function burnKnuckle() {
-  //document.getElementById('terry-sprite').setAttribute('src', player.animation[3]);
-  dummy.health = dummy.health - 10;
-  dummy.hits++;
-  drawUI();
-}
 
 function drawUI() {
   if (dummy.health > 0) {
